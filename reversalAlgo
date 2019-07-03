@@ -1,0 +1,26 @@
+    static void leftRotate(int array[], int numberOfElementsToRotate)
+	    {
+	        int length=array.length-1;
+	        reverseArray(array, 0, numberOfElementsToRotate-1);
+	        reverseArray(array, numberOfElementsToRotate, length);
+	        reverseArray(array, 0, length);
+	    }
+	    static void reverseArray(int array[], int start, int end)
+	    {
+	        int temp;
+	        while(start < end)
+	        {
+	            temp=array[start];
+	            array[start]=array[end];
+	            array[end]=temp;
+	            start++;
+	            end--;
+	        }
+	    }
+	    static void printArray(int array[])
+	    {
+	        for(int i=0;i<array.length;i++)
+	        {
+	            System.out.print(array[i]+" ");
+	        }
+	    }
